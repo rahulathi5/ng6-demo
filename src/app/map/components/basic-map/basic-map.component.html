@@ -1,0 +1,28 @@
+<div class="basic-map-wrapper">
+  <div class="left-half">
+    <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" [mapTypeId]="'roadmap'" [disableDefaultUI]="false" [zoomControl]="false" (mapClick)="mapClicked($event)">
+      <agm-marker *ngFor="let m of markers; let i = index" (markerClick)="clickedMarker(m, i)" [latitude]="m.lat" [longitude]="m.lng" [markerDraggable]="m.draggable" (dragEnd)="markerDragEnd(m, $event)">
+        <agm-info-window>
+          <strong>{{m.name}}</strong>
+        </agm-info-window>
+      </agm-marker>
+    </agm-map>
+  </div>
+  <div class="right-half">
+    <h3>Basic Map Features</h3>
+    <ul>
+      <li>
+        <h4> Showing Map with Multiple Marker</h4>
+      </li>
+      <li>
+        <h4>Marker On click - showing info window</h4>
+      </li>
+      <li>
+        <h4>Drag a marker and get the new Location</h4>
+      </li>
+      <li>
+        <h4>Add new marker on clicking on the map.</h4>
+      </li>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+<div class="map-wrapper">
+  <p>
+    Multiple Polygon(Zone) in view mode.
+  </p>
+  <agm-map [latitude]="latitude" [longitude]="longitude" [zoom]="zoom" [disableDefaultUI]="false" [zoomControl]="false">
+    <agm-polygon *ngFor="let zone of zoneList" [paths]="zone.paths" [strokeColor]="polygonColor" [fillColor]="polygonColor" [editable]="false">
+    </agm-polygon>
+  </agm-map>
+</div>

@@ -1,0 +1,19 @@
+<div class="basic-form-page">
+  <h2>A Basic Form with different type of validation: </h2>
+  <div>
+    <form #basicForm="ngForm" name="addForm" [uiForm]="basicForm" (submitFn)="submitData($event)" novalidate>
+      <mat-form-field>
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="Please enter name" name="name" required [(ngModel)]="formData.name" #name="ngModel" autocomplete="off">
+        <mat-hint *ngIf="name.errors && (name.dirty || name.touched) && name.errors.required && !formData.name">Name is required</mat-hint>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="Please enter email" name="email" required ui-email [(ngModel)]="formData.email" #email="ngModel" autocomplete="off">
+        <mat-hint *ngIf="email.errors && (email.dirty || email.touched) && email.errors.required && !formData.email">Email is required</mat-hint>
+        <mat-hint *ngIf="email.errors && (email.dirty || email.touched) && email.errors.uiEmail && formData.email">Please enter a valid email</mat-hint>
+      </mat-form-field>
+      <button type="submit" mat-flat-button color="primary" class="visit-page">Submit</button>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+agm-map {
+  height: 500px;
+}
+
+.half {
+  width: 48%;
+  padding: 10px;
+  display: inline-block;
+}

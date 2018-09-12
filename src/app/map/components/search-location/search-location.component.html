@@ -1,0 +1,10 @@
+<div class="map-wrapper">
+  <p>
+    Get Current location and search location.
+  </p>
+  <input placeholder="Search for location" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" class="form-control search-location" #search [formControl]="searchControl">
+  <agm-map [latitude]="latitude" [longitude]="longitude" [zoom]="zoom" [mapTypeId]="'roadmap'" [disableDefaultUI]="false" [zoomControl]="false">
+    <agm-marker [latitude]="latitude" [longitude]="longitude" [animation]="animation">
+    </agm-marker>
+  </agm-map>
+</div>

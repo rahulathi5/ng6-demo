@@ -1,0 +1,21 @@
+agm-map {
+  height: 500px;
+}
+
+.right-half {
+  width: 25%;
+  padding: 10px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.left-half {
+  width: 70%;
+  padding: 10px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.basic-map-wrapper {
+  /*background: #eee;*/
+}

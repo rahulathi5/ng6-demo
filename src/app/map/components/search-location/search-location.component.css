@@ -1,0 +1,16 @@
+agm-map {
+  height: 500px;
+}
+
+.search-location {
+  padding: 10px;
+  border-radius: 4px;
+  outline: none;
+  border: 1px solid #ddd;
+  width: 50%;
+  margin-bottom: 15px;
+}
+
+.map-wrapper {
+  margin: 20px;
+}
