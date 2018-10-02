@@ -1,0 +1,40 @@
+<div class="all-modal-wrapper">
+<p>Different Types of Modal</p>
+<button mat-flat-button color="primary" class="modal-btn" (click)="htmlInsideModal.open()">View Modal</button>
+<!-- <button mat-flat-button color="primary" class="modal-btn" (click)="componentInsideModal.open()">Component Inside Modal</button> -->
+<modal #htmlInsideModal>
+  <ng-template #modalHeader><h4>{{viewInfoModal.heading}}</h4></ng-template>
+  <ng-template #modalBody>
+    <p>{{viewInfoModal.body}}</p>
+  </ng-template>
+</modal>
+<!-- <modal #componentInsideModal>
+    <ng-template #modalHeader><h4>Another Component inside modal</h4></ng-template>
+    <ng-template #modalBody>
+      <app-component-as-modal></app-component-as-modal>
+    </ng-template>
+    <ng-template #modalFooter>
+  </ng-template>
+</modal> -->
+
+<ul>
+  <li *ngFor="let user of userList">
+    <span>{{user.name}}</span>
+    <span>
+      <mat-icon (click)="deleteConfirmationModal.open()">delete</mat-icon>
+    </span>
+    <modal #deleteConfirmationModal>
+    <ng-template #modalHeader><h4>Confirmation modal</h4></ng-template>
+    <ng-template #modalBody>
+      <app-component-as-modal [data]="user"></app-component-as-modal>
+    </ng-template>
+    <ng-template #modalFooter>
+      <button mat-raised-button color="warn" class="pull-right" (click)="deleteUser(deleteConfirmationModal,user)">Yes</button>      
+      <button mat-raised-button color="basic" class="pull-right mr-10" (click)="deleteConfirmationModal.close()">No</button>          
+  </ng-template>
+</modal>
+  </li>
+</ul>
+
+
+</div>

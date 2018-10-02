@@ -7,12 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BasicFormComponent implements OnInit {
 	formData:any;
+   hide = true;
   constructor() { }
 
   ngOnInit() {
   	this.formData={
   		name:'',
-  		email:''
+  		email:'',
+      contactNo:'',
+      url:'',
+      year:'',
+      zip:''
   	}
   }
 

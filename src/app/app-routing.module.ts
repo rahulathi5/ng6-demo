@@ -25,6 +25,10 @@ export const routes: Routes = [
 	{
 		path:'form',
 		loadChildren:'./validator/validator.module#ValidatorModule'
+	},
+	{
+		path:'modal',
+		loadChildren:'./modal/modal.module#ModalDemoModule'
 	}
 ];
 

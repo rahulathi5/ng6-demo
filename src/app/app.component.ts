@@ -1,5 +1,6 @@
 import { Component,SimpleChanges,OnChanges,ViewChild } from '@angular/core';
 import { MouseEvent, AgmPolygon, AgmMap,MapsAPILoader } from '@agm/core';
+
 declare var google: any;
 @Component({
   selector: 'app-root',

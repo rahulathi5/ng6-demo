@@ -214,3 +214,9 @@ h6 {
     transform: rotate(360deg);
   }
 }
+
+.modal-header .close{
+    position: absolute !important;
+    top: 20px !important;
+    right: 20px !important;
+}
