@@ -5,6 +5,8 @@ This is a demo project on Angular 6. Don't get confuse with the name ;)
 In this demo project there are different reusable components and custom directives. The project is themifyed with angular material.
 Also there is lazy loading in 3 modules(map, modal, validator)
 
+There are mainly several custom form validations, Different types of usefull map functionalities and custom modal.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.5.
 
 ## Development server
