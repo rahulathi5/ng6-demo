@@ -1,0 +1,80 @@
+<mat-sidenav-container class="example-container">
+  <mat-sidenav #sidenav mode="side" [(opened)]="opened" class="left-menu">
+    <div class="logo">
+    	<img src="http://www.golegal.co.za/wp-content/uploads/2015/09/google-logo.jpg">
+    </div>
+    <ul class="nav menu-list">
+    	<li class="nav-item text-center">
+    		<a class="nav-link" href="javascript:;">
+    			<i class="material-icons">dashboard</i>
+    			<p>Dashboard</p>
+    		</a>
+    	</li>
+    	<li class="nav-item text-center">
+    		<a class="nav-link" href="javascript:;">
+    			<i class="material-icons">category</i>
+    			<p>Product Category</p>
+    		</a>
+    	</li>
+    	<li class="nav-item text-center">
+    		<a class="nav-link" href="javascript:;">
+    			<i class="material-icons">view_list</i>
+    			<p>Product Category</p>
+    		</a>
+    	</li>
+    </ul>
+  </mat-sidenav>
+
+  <mat-sidenav-content class="main-content-wrapper">
+  	<div class="top-bar">
+  		<div class="profile-wrapper text-right">
+  			<div class="admin-info">
+  				<div class="admin-name">Koustuv Nandi</div>
+  				<div>Admin</div>
+  			</div>
+  			<button mat-button [matMenuTriggerFor]="menu" class="profile-btn">
+			  	<img class="admin-image" src="https://lh3.googleusercontent.com/-N1LCVDlzwXs/AAAAAAAAAAI/AAAAAAAAAAA/ACHi3rf9KBhAk92q4ug1QcfRr-v75auRQA/mo/photo.jpg?sz=46">
+			</button>
+			 <mat-menu #menu="matMenu" class="profile-menu">
+			  <button mat-menu-item>
+			  	 <mat-icon>lock</mat-icon>
+			    <span>Change Password</span>
+			  </button>
+			  <button mat-menu-item>
+			    <mat-icon>logout</mat-icon>
+			    <span>Logout</span>
+			  </button>
+			</mat-menu>
+  		</div>
+	</div>
+	<div class="main-contect">
+		<div class="custom-panel">
+			<h3>Dashboard</h3>
+			<p>The dashboard shows a qucik at a glance representation of the syatem.</p>
+
+			<div class="row margin0">
+				<div class="col-sm-5 matrix-box">
+					 <div class="pull-left">
+					 	<mat-icon class="matrix-icon">shopping_basket</mat-icon>
+					 </div>
+					 <div class="pull-right text-right">
+					 	<div>Total Products</div>
+					 	<div class="matrix-number">500</div>
+					 </div>
+				</div>
+				<div class="col-sm-2 offset-sm-2"></div>
+				<div class="col-sm-5 matrix-box">
+					 <div class="pull-left">
+					 	<mat-icon class="matrix-icon">star</mat-icon>
+					 </div>
+					 <div class="pull-right text-right">
+					 	<div>Top Products</div>
+					 	<div class="matrix-number">150</div>
+					 </div>
+				</div>
+			</div>
+		</div>
+	</div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+

@@ -15,7 +15,7 @@ export const routes: Routes = [
 	},
 	{ 
 		path: '', 
-		redirectTo: '/welcome', 
+		redirectTo: '/auth', 
 		pathMatch: 'full' 
 	},	
 	{
@@ -29,6 +29,12 @@ export const routes: Routes = [
 	{
 		path:'modal',
 		loadChildren:'./modal/modal.module#ModalDemoModule'
+	},{
+		path: 'auth',
+		loadChildren:'./login/login.module#LoginModule'
+	},{
+		path: 'dashboard',
+		loadChildren:'./dashboard/dashboard.module#DashboardModule'
 	}
 ];
 

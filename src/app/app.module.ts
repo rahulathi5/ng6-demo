@@ -10,13 +10,14 @@ import { AgmCoreModule } from '@agm/core';
 import { IndexModule } from './index/index.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // import { ValidatorModule } from './validator/validator.module';
-
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
+  CommonModule,
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,

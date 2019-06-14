@@ -1,0 +1,43 @@
+ :host {
+        display: flex;
+        justify-content: center;
+        padding: 100px 0;
+        /*padding: calc((100vh - 307px)/2) 0px;*/
+      }
+
+      .mat-form-field {
+        width: 100%;
+        min-width: 300px;
+      }
+
+      mat-card-title,
+      mat-card-content {
+        display: flex;
+        justify-content: center;
+      }
+
+      .error {
+        padding: 16px;
+        width: 300px;
+        color: white;
+        background-color: red;
+      }
+
+      .button {
+        display: flex;
+        justify-content: center;
+      }
+
+.login-btn{
+        width: 100%;
+}
+
+.mat-hint{
+  color: red;
+}
+
+.forgot-password-wrap {
+  margin-top: 15px;
+  text-align: center;
+  cursor: pointer;
+}
