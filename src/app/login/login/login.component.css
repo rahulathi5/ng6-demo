@@ -1,8 +1,16 @@
  :host {
         display: flex;
         justify-content: center;
-        padding: 100px 0;
-        /*padding: calc((100vh - 307px)/2) 0px;*/
+        /*padding: 100px 0;*/
+        background: url(../../../assets/background-723053_1920.jpg);
+        background-repeat: no-repeat;
+    background-size: cover;
+        padding: calc((100vh - 302px)/2) 0px;
+        box-shadow: 0 14px 28px rgba(0,0,0,.25)
+      }
+
+      .mat-card{
+        border-radius: 5px;
       }
 
       .mat-form-field {

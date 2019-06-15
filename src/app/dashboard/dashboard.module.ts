@@ -12,6 +12,16 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatIconModule} from '@angular/material/icon';
 import {MatExpansionModule} from '@angular/material/expansion';
+import {MatTableModule} from '@angular/material/table';
+import {MatSortModule} from '@angular/material/sort';
+import {MatSelectModule} from '@angular/material/select';
+import {MatSliderModule} from '@angular/material/slider';
+import {
+  MatCardModule,
+  MatInputModule,
+  MatFormFieldModule,
+  MatButtonModule
+} from '@angular/material';
 
 const dashboardRoutes: Routes = [
     { path: 'home', component: HomeComponent  },
@@ -29,6 +39,14 @@ const dashboardRoutes: Routes = [
     MatMenuModule,
     MatIconModule,
     MatExpansionModule,
+    MatCardModule,
+  MatInputModule,
+  MatButtonModule,
+  MatTableModule,
+  MatSortModule,
+  MatSelectModule,
+  MatSliderModule,
+  MatFormFieldModule,
     RouterModule.forChild(dashboardRoutes),
   ],
   declarations: [HomeComponent]

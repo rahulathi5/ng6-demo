@@ -19,7 +19,7 @@
     	<li class="nav-item text-center">
     		<a class="nav-link" href="javascript:;">
     			<i class="material-icons">view_list</i>
-    			<p>Product Category</p>
+    			<p>Product List</p>
     		</a>
     	</li>
     </ul>
@@ -27,7 +27,11 @@
 
   <mat-sidenav-content class="main-content-wrapper">
   	<div class="top-bar">
-  		<div class="profile-wrapper text-right">
+  		<div class="page-heading pull-left">
+  			<div class="page-name"><h3 class="margin0">Dashboard</h3></div>
+  			<p class="page-desc">The dashboard shows a qucik at a glance representation of the syatem.</p>
+  		</div>
+  		<div class="profile-wrapper pull-right text-right">
   			<div class="admin-info">
   				<div class="admin-name">Koustuv Nandi</div>
   				<div>Admin</div>
@@ -48,32 +52,231 @@
   		</div>
 	</div>
 	<div class="main-contect">
-		<div class="custom-panel">
-			<h3>Dashboard</h3>
-			<p>The dashboard shows a qucik at a glance representation of the syatem.</p>
-
-			<div class="row margin0">
-				<div class="col-sm-5 matrix-box">
+					 	<!-- <mat-icon class="matrix-icon">shopping_basket</mat-icon> -->
+					 	<!-- <mat-icon class="matrix-icon">star</mat-icon> -->
+		<!-- ============================ dashboard ======================= -->			 	
+		<!-- <div class="row matrix-row">
+				<div class="col-sm-3 matrix-box bg-orange">
 					 <div class="pull-left">
-					 	<mat-icon class="matrix-icon">shopping_basket</mat-icon>
+					 	<img src="../../../assets/shopping-bag.png" class="matrix-image">
 					 </div>
 					 <div class="pull-right text-right">
-					 	<div>Total Products</div>
+					 	<div class="matrix-name">Total Products</div>
 					 	<div class="matrix-number">500</div>
 					 </div>
 				</div>
-				<div class="col-sm-2 offset-sm-2"></div>
-				<div class="col-sm-5 matrix-box">
+				<div class="col-sm-1 offset-sm-1"></div>
+				<div class="col-sm-3 matrix-box bg-blue">
 					 <div class="pull-left">
-					 	<mat-icon class="matrix-icon">star</mat-icon>
+					 	<img src="../../../assets/favourites.png" class="matrix-image">
 					 </div>
 					 <div class="pull-right text-right">
-					 	<div>Top Products</div>
+					 	<div class="matrix-name">Top Products</div>
 					 	<div class="matrix-number">150</div>
 					 </div>
 				</div>
-			</div>
-		</div>
+			</div> -->
+		<!-- <div class="custom-panel"> -->
+		<!-- </div> -->
+
+		<!-- ============================ change password ======================= -->
+		<!-- <div class="col-sm-6 padding0">
+			<mat-card>
+				<mat-card-title>Change Password</mat-card-title>
+				<mat-card-content>
+				  <form>
+				    <p>
+				      <mat-form-field>
+				      	<mat-label>Old Password</mat-label>
+				        <input type="password" matInput placeholder="Enter old password">
+				      </mat-form-field>
+				    </p>
+				      <p>
+				      <mat-form-field>
+				      	<mat-label>New Password</mat-label>
+				        <input type="password" matInput placeholder="Enter new password" [type]="hide ? 'password' : 'text'">
+				        <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+				      </mat-form-field>
+				    </p>
+
+				    <div class="button text-right">
+				      <button type="submit" class="login-btn mr10" mat-raised-button color="default">Cancel</button>
+				      <button type="submit" class="login-btn" mat-raised-button color="primary">Submit</button>
+				    </div>
+				  </form>
+				</mat-card-content>
+			</mat-card>
+		</div> -->
+		<!-- ============================ product category list ======================= -->
+			<!-- <mat-card>
+				<mat-card-content>
+					<div class="text-right">
+						 <button type="submit" class="login-btn" mat-raised-button color="primary">Add Category</button>
+					</div>
+					<table mat-table [dataSource]="dataSource" matSort  class="mat-elevation-z8 category-table">
+
+					  <ng-container matColumnDef="name">
+					    <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
+					    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+					  </ng-container>
+
+					 
+					  <ng-container matColumnDef="subCategory">
+					    <th mat-header-cell *matHeaderCellDef mat-sort-header> Sub Categories </th>
+					    <td mat-cell *matCellDef="let element"> {{element.subCategory}} </td>
+					  </ng-container>
+
+					  
+					  <ng-container matColumnDef="action">
+					    <th mat-header-cell *matHeaderCellDef> Action </th>
+					    <td mat-cell *matCellDef="let element"> 
+					    	 <button mat-icon-button color="primary">
+					    	 	<mat-icon class="material-icons">edit</mat-icon>
+					    	 </button>
+					    	  <button mat-icon-button color="warn">
+					    	 	<mat-icon class="material-icons">delete</mat-icon>
+					    	 </button>
+					     </td>
+					  </ng-container>
+
+					  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+					  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+					</table>
+				</mat-card-content>
+			</mat-card> -->
+			<!-- ============================ add product category ======================= -->
+			<!-- <mat-card>
+				<mat-card-content>
+					<div class="text-right">
+						 <button type="submit" class="login-btn" mat-raised-button color="default">
+						 		<mat-icon class="material-icons">keyboard_backspace</mat-icon>
+						 	Back to List
+						 </button>
+					</div>
+					<form>
+					    <p>
+					      <mat-form-field class="full-width">
+					      	<mat-label>Category Name</mat-label>
+					        <input type="text" matInput placeholder="Enter category name">
+					      </mat-form-field>
+					    </p>
+					      <p>
+					      <mat-form-field class="full-width">
+					      	<mat-label>Enter Sub Categories (optional)</mat-label>
+					        <textarea matInput placeholder="Write sub categories separated by comma"></textarea>
+					      </mat-form-field>
+					    </p>
+
+					    <div class="button text-right">
+					      <button type="submit" class="login-btn mr10" mat-raised-button color="default">Cancel</button>
+					      <button type="submit" class="login-btn" mat-raised-button color="primary">Add</button>
+					    </div>
+				  </form>
+					
+				</mat-card-content>
+			</mat-card> -->
+			<!-- ============================ product list ======================= -->
+			<mat-card>
+				<mat-card-content>
+					<div class="text-right mb20">
+						 <button type="submit" class="login-btn mr10" mat-raised-button color="primary">
+						 	Add Product
+						 </button>
+						  <button type="submit" class="login-btn" mat-stroked-button color="primary">
+						 	Upload CSV
+						 </button>
+					</div>
+					<mat-accordion class="filter-section">
+					  <mat-expansion-panel [expanded]="true"
+                      >
+					    <mat-expansion-panel-header>
+					      <mat-panel-title  class="filter-title">
+					        Filter Products
+					      </mat-panel-title>
+					    </mat-expansion-panel-header>
+
+					      <form>
+							<div class="row margin0">
+
+							      <mat-form-field class="col-sm-4">
+							      	<mat-label>Product Name</mat-label>
+							        <input type="text" matInput placeholder="Enter product name">
+							      </mat-form-field>
+							     <mat-form-field class="col-sm-4">
+								  <mat-label>Favorite food</mat-label>
+								  <mat-select>
+								    <mat-option *ngFor="let food of foods" [value]="food.value">
+								      {{food.viewValue}}
+								    </mat-option>
+								  </mat-select>
+								</mat-form-field>
+							       <mat-form-field class="col-sm-4">
+							      	<mat-label>Request Number</mat-label>
+							        <input type="text" matInput placeholder="Enter request number">
+							      </mat-form-field>
+								 <div class="col-sm-4">
+								 	 <mat-label class="range-label">Price Range</mat-label>
+								      <mat-slider class="slider" min="1" max="5" step="0.5" value="1.5"></mat-slider>
+							 	</div>
+							</div>
+						    <div class="button text-right">
+						      <button type="submit" class="login-btn mr10" mat-stroked-button color="default">Clear Filter</button>
+						      <button type="submit" class="login-btn" mat-raised-button color="primary">Apply filter</button>
+						    </div>
+				 	 </form>
+					</mat-expansion-panel>
+				</mat-accordion>
+					<!-- <mat-card class="filter-section">
+						<mat-card-title class="filter-title">Filter Products</mat-card-title>
+						<mat-card-content>
+						
+						</mat-card-content>
+					</mat-card> -->
+					<table mat-table [dataSource]="dataSource1" matSort  class="mat-elevation-z8 category-table">
+
+					  <ng-container matColumnDef="name">
+					    <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
+					    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+					  </ng-container>
+
+					 
+					  <ng-container matColumnDef="category">
+					    <th mat-header-cell *matHeaderCellDef mat-sort-header> Category </th>
+					    <td mat-cell *matCellDef="let element"> {{element.category}} </td>
+					  </ng-container>
+
+					  <ng-container matColumnDef="price">
+					    <th mat-header-cell *matHeaderCellDef mat-sort-header> price </th>
+					    <td mat-cell *matCellDef="let element"> {{element.price}} </td>
+					  </ng-container>
+
+
+					  <ng-container matColumnDef="stock">
+					    <th mat-header-cell *matHeaderCellDef mat-sort-header> stock </th>
+					    <td mat-cell *matCellDef="let element"> {{element.stock}} </td>
+					  </ng-container>
+
+					  
+					  <ng-container matColumnDef="action">
+					    <th mat-header-cell *matHeaderCellDef> Action </th>
+					    <td mat-cell *matCellDef="let element"> 
+					    	 <button mat-icon-button color="primary">
+					    	 	<mat-icon class="material-icons">edit</mat-icon>
+					    	 </button>
+					    	  <button mat-icon-button color="warn">
+					    	 	<mat-icon class="material-icons">delete</mat-icon>
+					    	 </button>
+					     </td>
+					  </ng-container>
+
+					  <tr mat-header-row *matHeaderRowDef="productColumns"></tr>
+					  <tr mat-row *matRowDef="let row; columns: productColumns;"></tr>
+					</table>
+					
+				</mat-card-content>
+			</mat-card>
+
+
 	</div>
   </mat-sidenav-content>
 </mat-sidenav-container>
